@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+*{
+    font-size: 10px;
+    background-color: #e0fbfc;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e0fbfc;
+    
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table-input{
+    margin-top: 3%;
+    width: 40%;
+    height: 170px;
+    background-color: #98c1d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
 }
+.table-input h1{
+    background-color: #98c1d9;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    font-size: 16px;
 }
-
-.App-link {
-  color: #61dafb;
+.input-tittle{
+   border: 2px; 
 }
+.button-create{
+    background-color: #3d5a80;
+    padding:0 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+}
+.button-create:hover{
+    padding: 0px 30px;
+}
+.output{
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+.member{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    padding: 5px;
+    animation-name: topToBottom;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+@keyframes topToBottom{
+    0% {top:-20px}
+    100% {top:0px}
+}
+.output-tittle{
+    font-weight:500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    font-size: 12px;
+}
+.output-a{
+    background-color: #34a0a4;
+}
+.output-content{
+    font-size: 8px;
+}
+.box{
+    display: flex;
+}
+.box i{
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    width: 100%;
+}
+.fa-trash-can{
+    background-color: #bf0404;
+    border-bottom-left-radius: 5px;
+    font-size: 10px;
+}
+.fa-star{
+    background-color:#f2bb13 ;
+    border-bottom-right-radius: 5px;
+    font-size: 10px;
+}
+.bg-yellow{
+    background-color: #f2bb13;
 }
