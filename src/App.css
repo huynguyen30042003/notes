@@ -12,9 +12,9 @@
 }
 .table-input{
     margin-top: 3%;
-    width: 40%;
-    height: 170px;
-    background-color: #98c1d9;
+    width: 100vh;
+    height: 50vh;
+    background-color: rgb(50, 62, 85);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,40 +22,150 @@
     border-radius: 15px;
 }
 .table-input h1{
-    background-color: #98c1d9;
-
-    font-size: 16px;
+    background-color: rgb(50, 62, 85);
+    border: #bf0404 ;
+    font-size: 7vh;
 }
 .input-tittle{
    border: 2px; 
 }
+
+
+.inputBox {
+    position: relative;
+    width: 70vh;
+    height: 10vh;
+    background: rgb(50, 62, 85);
+
+}
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255, 0.7);
+    background: rgb(50, 62, 85);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 2em;
+    transition: 0.1s;
+    margin-bottom: 10px;
+    height: 7vh;
+
+  }
+  .inputBox textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255, 0.7);
+    background: rgb(50, 62, 85);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 2em;
+    transition: 0.1s;
+    margin-bottom: 10px;
+
+  }
+  .inputBox span {
+    position: absolute;
+    height: 6.5vh;
+    left: 0;
+    margin: 0.15em 0 0 0.15em;
+    padding: 0.8em;
+    pointer-events: none;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    transition: 0.5s;
+    background: rgb(50, 62, 85);
+    border-radius: 0.3em;
+  }
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span {
+    color: #75e44f;
+    margin-top: 0;
+    height: 2vh;
+    transform: translateX(2px) translateY(-0.7em);
+    font-size: 1.3em;
+    padding: 0 20px;
+    background: rgb(50, 62, 85);
+    border-left: 1px solid #75e44f;
+    border-right: 1px solid #75e44f;
+    letter-spacing: 0.2em;
+  }
+  .inputBox input:valid,
+  .inputBox input:focus {
+    border: 1px solid #75e44f;
+  }
+  /* .inputBox:nth-child(1) input:valid ~ span,
+  .inputBox:nth-child(1) input:focus ~ span{
+    background: #75e44f;
+    color: rgb(50, 62, 85);
+    border-radius: 2px;
+  } */
+  /* .inputBox textarea:valid ~ span, */
+  .inputBox textarea:focus ~ span {
+    color: #75e44f;
+    margin-top: 0;
+    height: 2vh;
+    transform: translateX(2px) translateY(-0.7em);
+    font-size: 1.3em;
+    padding: 0 20px;
+    background: rgb(50, 62, 85);
+    border-left: 1px solid #75e44f;
+    border-right: 1px solid #75e44f;
+    letter-spacing: 0.2em;
+  }
+  .inputBox textarea:valid,
+  .inputBox textarea:focus {
+    border: 1px solid #75e44f;
+  }
+
+
+
+
+
+
+
 .button-create{
     background-color: #3d5a80;
     padding:0 20px;
-    border-radius: 5px;
+    border-radius: 1vh;
     color: #fff;
-    font-size: 12px;
+    font-size: 5vh;
+    position: relative;
+
 }
 .button-create:hover{
+    animation-name: hoverBottom;
+    animation-duration: 1s;
     padding: 0px 30px;
+
+}
+@keyframes hoverBottom{
+    0% {padding: 0 10px;}
+    100% {padding: 0px 30px;}
 }
 .output{
-    margin-top: 30px;
-    width: 80%;
+    /* margin-top: 5vh; */
+    width: 180vh;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
     flex-wrap: wrap;
+    gap:15hv;
 }
 .member{
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 23%;
-    padding: 5px;
+    width: 40vh;
+    margin: 1vh;
     animation-name: topToBottom;
     animation-duration: 1s;
     animation-direction: normal;
+    box-shadow: red;
 }
 @keyframes topToBottom{
     0% {top:-20px}
@@ -63,16 +173,21 @@
 }
 .output-tittle{
     font-weight:500;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-
-    font-size: 12px;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    min-height: 5vh;
+    font-size: 4vh;
+    background-color: #0C469C;
 }
 .output-a{
-    background-color: #34a0a4;
+    padding: 1vh;
 }
 .output-content{
-    font-size: 8px;
+    font-size: 3vh;
+    min-height: 20vh;
+    border-right: 0.5vh solid black;
+    border-left: 0.5vh solid black;
+
 }
 .box{
     display: flex;
@@ -80,19 +195,43 @@
 .box i{
     display: flex;
     justify-content: center;
-    padding: 5px 0;
+    padding: 1vh 0;
     width: 100%;
 }
 .fa-trash-can{
-    background-color: #bf0404;
-    border-bottom-left-radius: 5px;
-    font-size: 10px;
+    background-color: #E8361E;
+    border-bottom-left-radius: 2vh;
+    font-size: 2.2vh;
 }
 .fa-star{
     background-color:#f2bb13 ;
-    border-bottom-right-radius: 5px;
-    font-size: 10px;
+    border-bottom-right-radius: 2vh;
+    font-size: 2.2vh;
 }
 .bg-yellow{
     background-color: #f2bb13;
+}
+.link {
+    height: 10vh;
+    width: 50%;
+    position: relative;
+}
+.link a{
+    position: absolute;
+    right: 0;
+    font-size: 3vh;
+    color: blue;
+
+}
+.link-back {
+    height: 10vh;
+    width: 50%;
+    position: relative;
+}
+.link-back a{
+    position: absolute;
+    left: 0;
+    font-size: 3vh;
+    color: blue;
+
 }
