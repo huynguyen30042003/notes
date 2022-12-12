@@ -207,6 +207,8 @@
 }
 .bg-yellow{
     background-color: #f2bb13;
+    border-bottom: 0.5vh solid black;
+    border-top: 0.5vh solid black;
 }
 .link {
     position: relative;
