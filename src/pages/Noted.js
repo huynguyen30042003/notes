@@ -39,7 +39,7 @@ function Noted() {
         <div className='output'>
         {
           list.map((task,index) => (
-            <div className='member'>
+            <div key={index} className='member'>
             <a className={(task.star==true)?'output-a output-tittle':'output-a output-tittle'}>
               {task.tittle} 
               
