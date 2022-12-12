@@ -251,10 +251,16 @@ margin-bottom: 5em;
     }
     .output{
         width: 90vw;
-
     }
     .member{
         width: 60vh;
+    }
+    .box{
+        height: 5em;
+    }
+    .box i{
+        font-size: 2.5em;
+        padding: 1.5vh 0;
 
     }
 }
@@ -277,6 +283,7 @@ margin-bottom: 5em;
     .member{
         width: 40vh;
     }
+    
 }
 /* @media screen and (max-width:64em){
     
