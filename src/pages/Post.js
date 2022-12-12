@@ -20,6 +20,18 @@ function Post() {
     localStorage.setItem("list.note",JSON.stringify(list))
     // console.log(JSON.parse(localStorage.getItem("list.note")));
   },[list]) 
+  const setTitle=(e)=>{
+    
+
+    setNewList({
+      ...newList,tittle:e.target.value,star:false,id:count
+    })
+  }
+  const handleContentValue=(e)=>{
+    setNewList({
+      ...newList,content:e.target.value,
+    })
+  }
   const creating=()=>{
     if (value==''){
       alert("bạn cần nhập tiêu đề")
@@ -28,8 +40,8 @@ function Post() {
       alert("bạn cần nhập nội dung")
       tabRef.current.focus();
     }else{
-    setCount(+count+1)
-    setList([...list,newList])
+      setCount(+count+1)
+    setList([...list,newList]);
     console.log(list);
     inputRef.current.focus();
     setValue('')
@@ -71,9 +83,7 @@ function Post() {
         <div className="inputBox">
         <input type="text" required="required" 
         // placeholder="Enter title..." 
-        onChange={(e)=>setNewList({
-          ...newList,tittle:e.target.value,star:false,id:count
-        })}
+        onChange={(e)=>setTitle(e)}
         onChangeCapture={(e)=>setValue(e.target.value)}
         ref={inputRef}
         value={value}
@@ -86,9 +96,7 @@ function Post() {
         
         <div className='inputBox'>
         <textarea  type="text" className='border-[2px] border-blue-500 rounded-lg w-3/4 py-42 px-4 outline-green-500' 
-        onChange={(e)=>setNewList({
-          ...newList,content:e.target.value,
-        })}
+        onChange={(e)=>handleContentValue(e)}
         onChangeCapture={(e)=>setValueContent(e.target.value)}
         // ref={tabRef}
         value={valueContent}

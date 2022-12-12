@@ -14,9 +14,13 @@ function Noted() {
     setList(updateList)
   }
   const noteStart=(index)=>{
-    console.log(index);
+
+
     const updateList =list.map((post,id)=>{
-      if( post.id==index){
+      console.log(id);
+      console.log(index);
+      console.log(post.id);
+      if( id==index){
         return {
           ...post,
           star: !post.star
@@ -33,9 +37,9 @@ function Noted() {
   return (
     <>
     <div className="screen">
-    <div className="link-back">
-        <Link to="/">Back Page</Link>
-      </div>
+        <div className="link-back">
+          <Link to="/">Back Page</Link>
+        </div>
         <div className='output'>
         {
           list.map((task,index) => (
@@ -53,7 +57,7 @@ function Noted() {
             onClick={()=>deleteNote(index)}
             ></i>
             <i className="fa-regular fa-star"
-            onClick={()=>noteStart(task.id)}
+            onClick={()=>noteStart(index)}
             ></i>
             </div>
           </div>  

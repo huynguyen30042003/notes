@@ -125,13 +125,6 @@
   .inputBox textarea:focus {
     border: 1px solid #75e44f;
   }
-
-
-
-
-
-
-
 .button-create{
     background-color: #3d5a80;
     padding:0 0.5em;
@@ -153,8 +146,7 @@
 }
 .output{
     /* margin-top: 5vh; */
-    width: 180vh;
-    max-width: 1000px;
+    width: 90vw;
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
@@ -165,7 +157,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 40vh;
+    width: 50vh;
     margin: 1vh;
     animation-name: topToBottom;
     animation-duration: 1s;
@@ -231,9 +223,11 @@
 
 }
 .link-back {
-    height: 10vh;
-    width: 50%;
     position: relative;
+    margin-top: 1%;
+    width: 80vw;
+margin-bottom: 5em;
+    display: flex;
 }
 .link-back a{
     position: absolute;
@@ -252,6 +246,17 @@
     .link{
         width: 90vw;
     }
+    .link-back{
+        width: 90vw;
+    }
+    .output{
+        width: 90vw;
+
+    }
+    .member{
+        width: 50vh;
+
+    }
 }
 @media screen and (min-width:46.25em)and (max-width:63.9475em){
     .table-input{
@@ -262,6 +267,15 @@
     }
     .link{
         width: 90vw;
+    }
+    .link-back{
+        width: 90vw;
+    }
+    .output{
+        width: 100vw;
+    }
+    .member{
+        width: 40vh;
     }
 }
 /* @media screen and (max-width:64em){
